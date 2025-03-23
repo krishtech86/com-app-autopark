@@ -1,4 +1,4 @@
-package com.autopark;
+package com.autopark.autopark;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
