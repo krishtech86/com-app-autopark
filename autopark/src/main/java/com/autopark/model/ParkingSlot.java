@@ -1,6 +1,7 @@
 package com.autopark.model;
 
 
+import com.autopark.dto.ParkingRequest;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +21,8 @@ public class ParkingSlot {
     @OneToOne(mappedBy = "parkingSlot")
     private Booking booking;
 
+    private String vehicleNumber;
+    private String vehicleModel;
     public ParkingSlot() {
     }
 
@@ -63,6 +66,24 @@ public class ParkingSlot {
 
     public ParkingSlot setBooking(Booking booking) {
         this.booking = booking;
+        return this;
+    }
+
+    public String getVehicleNumber() {
+        return vehicleNumber;
+    }
+
+    public ParkingSlot setVehicleNumber(String vehicleNumber) {
+        this.vehicleNumber = vehicleNumber;
+        return this;
+    }
+
+    public String getVehicleModel() {
+        return vehicleModel;
+    }
+
+    public ParkingSlot setVehicleModel(String vehicleModel) {
+        this.vehicleModel = vehicleModel;
         return this;
     }
 }
