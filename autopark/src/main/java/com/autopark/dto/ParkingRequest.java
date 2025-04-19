@@ -1,10 +1,14 @@
 package com.autopark.dto;
 
 
-public class ParkingRequest {
+import com.autopark.model.ParkingSlot;
+
+public class ParkingRequest{
     private String vehicleNumber;
     private String vehicleModel;
     private double charges;
+
+    private String slotNumber;
 
     public ParkingRequest() {
     }
@@ -37,5 +41,14 @@ public class ParkingRequest {
 
     public void setCharges(double charges) {
         this.charges = charges;
+    }
+
+    public String getSlotNumber() {
+        return slotNumber;
+    }
+
+    public ParkingRequest setSlotNumber(ParkingSlot slotNumber) {
+        this.slotNumber = String.valueOf(slotNumber);
+        return this;
     }
 }
